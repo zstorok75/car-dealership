@@ -1,0 +1,16 @@
+openapi: 3.0.3
+
+info:
+  title: Car-dealersip app
+  version: 0.1.0
+  description: Car-dealersip and workshop administration software
+
+servers:
+  - url: http://localhost:8080
+    description: Development server
+
+paths:
+  # CUSTOMER Endpoints
+  /customers:
+    $ref: './customer/customer.endpoints.yaml#/paths/~1customers'
+  
