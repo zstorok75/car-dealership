@@ -1,0 +1,7 @@
+car-dealership-frontend/node_modules/
+car-dealership-frontend/.angular/
+car.dealership.backend/.idea/
+car.dealership.backend/target/
+.vscode/settings.json
+car-dealership-frontend/package-lock.json
+car-dealership-frontend/generated-openapi/
