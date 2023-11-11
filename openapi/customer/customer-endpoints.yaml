@@ -1,0 +1,28 @@
+paths:
+  /customers:
+    get:
+      tags:
+      - Customer
+      summary: Represent a Customer
+      
+      operationId: getCustomersByParameters
+
+      parameters:
+        - name: name
+          in: query
+          description: Name's part of the Customer(s)
+          required: false
+          schema:
+            type: string
+
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: './customer-schema.yaml#/components/schemas/Customer'
+
+    

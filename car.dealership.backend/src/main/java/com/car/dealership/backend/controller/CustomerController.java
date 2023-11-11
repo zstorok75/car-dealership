@@ -4,7 +4,7 @@ import com.example.car.dealership.service.CustomerService;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class CustomerController extends CustomerApi {
+public class CustomerController {
 
     private CustomerService customerService;
 
@@ -12,8 +12,7 @@ public class CustomerController extends CustomerApi {
         this.customerService = customerService;
     }
 
-    @Override
-    public <List<CustomerDto>> getCustomersByFilterParam(String id, String name) {
-
+    public Void getCustomersByFilterParam(String id, String name) {
+        return null;
     }
 }

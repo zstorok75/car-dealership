@@ -12,5 +12,5 @@ servers:
 paths:
   # CUSTOMER Endpoints
   /customers:
-    $ref: './customer/customer.endpoints.yaml#/paths/~1customers'
+    $ref: './customer/customer-endpoints.yaml#/paths/~1customers'
   

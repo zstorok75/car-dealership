@@ -18,18 +18,18 @@ public class CustomerService {
         this.customerRepository = customerRepository;
     }
 
-    public void saveNewCustomer(CustomerDto dto) {
-        CustomerEntity entity = new CustomerEntity(dto);
+    public void saveNewCustomer() {
+        CustomerEntity entity = new CustomerEntity();
         this.customerRepository.save(entity);
     }
 
-    public List<CustomerEntity> getCustomersByFilterParam(filter: any) {
-        if (filter.id != null) {
-            List<CustomerEntity> list = new ArrayList<>();
-            list.add(this.customerRepository.getById(filter.id));
-            return list;
-        } else if (filter.name != null) {
-            return this.customerRepository.findBy()
-        }
-    }
+//    public List<CustomerEntity> getCustomersByFilterParam(filter: any) {
+//        if (filter.id != null) {
+//            List<CustomerEntity> list = new ArrayList<>();
+//            list.add(this.customerRepository.getById(filter.id));
+//            return list;
+//        } else if (filter.name != null) {
+//            return this.customerRepository.findBy()
+//        }
+//    }
 }

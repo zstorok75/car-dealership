@@ -26,13 +26,13 @@ public class CustomerEntity {
         this.email = email;
     }
 
-    public CustomerEntity(CustomerDto dto) {
-        if (dto.id != null) {
-            this.id = dto.id;
-        }
-        this.name = dto.name;
-        this.email = dto.email;
-    }
+//    public CustomerEntity(CustomerDto dto) {
+//        if (dto.id != null) {
+//            this.id = dto.id;
+//        }
+//        this.name = dto.name;
+//        this.email = dto.email;
+//    }
 
     public String getId() {
         return id;

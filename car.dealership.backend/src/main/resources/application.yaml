@@ -1,0 +1,22 @@
+logging:
+  level:
+    root: info
+    com.example: debug
+    org.springframework.web: info
+    org.springframework.security.web: info
+    org.hibernate: error
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/car_dealership_db?serverTimezone=UTC&characterEncoding=utf8
+    username: postgres
+    password: Zsozso
+
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+
+cors-policies: http://localhost:4200, http://127.0.0.1:4200
+registration-verify-url: http://localhost:4200
