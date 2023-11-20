@@ -1,6 +1,6 @@
-package com.example.car.dealership.controller;
+package com.car.dealership.backend.controller;
 
-import com.example.car.dealership.service.CustomerService;
+import com.car.dealership.backend.service.CustomerService;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController

@@ -1,5 +1,6 @@
-package com.example.car.dealership.entity;
+package com.car.dealership.backend.entity;
 
+import com.car.dealership.backend.dto.CustomerDto;
 import jakarta.persistence.*;
 import org.hibernate.validator.constraints.UUID;
 
@@ -26,13 +27,13 @@ public class CustomerEntity {
         this.email = email;
     }
 
-//    public CustomerEntity(CustomerDto dto) {
-//        if (dto.id != null) {
-//            this.id = dto.id;
-//        }
-//        this.name = dto.name;
-//        this.email = dto.email;
-//    }
+    public CustomerEntity(CustomerDto dto) {
+        if (dto.getId() != null) {
+            this.id = dto.getId();
+        }
+        this.name = dto.getName();
+        this.email = dto.getEmail();
+    }
 
     public String getId() {
         return id;

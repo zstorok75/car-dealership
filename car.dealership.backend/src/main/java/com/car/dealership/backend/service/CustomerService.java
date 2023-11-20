@@ -1,8 +1,9 @@
-package com.example.car.dealership.service;
+package com.car.dealership.backend.service;
 
-import com.example.car.dealership.entity.CustomerEntity;
-import com.example.car.dealership.repository.CustomerRepository;
+import com.car.dealership.backend.entity.CustomerEntity;
+import com.car.dealership.backend.repository.CustomerRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,24 +13,21 @@ import java.util.List;
 @Transactional
 public class CustomerService {
 
+    @Autowired
     private CustomerRepository customerRepository;
 
-    public CustomerService(CustomerRepository customerRepository) {
-        this.customerRepository = customerRepository;
-    }
+    public CustomerService() {}
 
     public void saveNewCustomer() {
         CustomerEntity entity = new CustomerEntity();
         this.customerRepository.save(entity);
     }
 
-//    public List<CustomerEntity> getCustomersByFilterParam(filter: any) {
-//        if (filter.id != null) {
-//            List<CustomerEntity> list = new ArrayList<>();
-//            list.add(this.customerRepository.getById(filter.id));
-//            return list;
-//        } else if (filter.name != null) {
-//            return this.customerRepository.findBy()
-//        }
-//    }
+    public List<CustomerEntity> getCustomersByName(String name) {
+        if (name != null) {
+            return this.customerRepository.getCustomersByName(name);
+        } else {
+            return this.customerRepository.findAll();
+        }
+    }
 }
