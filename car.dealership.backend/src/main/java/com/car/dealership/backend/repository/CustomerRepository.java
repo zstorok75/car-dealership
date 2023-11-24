@@ -2,7 +2,6 @@ package com.car.dealership.backend.repository;
 
 import com.car.dealership.backend.entity.CustomerEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -11,4 +10,5 @@ import java.util.List;
 public interface CustomerRepository extends JpaRepository<CustomerEntity, String> {
 
     List<CustomerEntity> getCustomersByName(String name);
+
 }

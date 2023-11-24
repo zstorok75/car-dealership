@@ -5,7 +5,7 @@ paths:
       - Customer
       summary: Represent a Customer
       
-      operationId: getCustomersByParameters
+      operationId: getCustomersByName
 
       parameters:
         - name: name
