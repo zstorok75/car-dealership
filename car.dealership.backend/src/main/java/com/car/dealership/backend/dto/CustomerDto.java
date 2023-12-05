@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 
 public class CustomerDto {
 
-    private String id;
+    private Long id;
 
     private String name;
 
@@ -12,17 +12,17 @@ public class CustomerDto {
 
     public CustomerDto() {}
 
-    public CustomerDto(String id, String name, String email) {
+    public CustomerDto(Long id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

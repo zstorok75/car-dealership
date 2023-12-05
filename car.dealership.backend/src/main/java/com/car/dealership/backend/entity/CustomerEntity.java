@@ -9,16 +9,23 @@ import org.hibernate.validator.constraints.UUID;
 public class CustomerEntity {
 
     @Id
-    @UUID
+    // @UUID
     @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "NAME")
     private String name;
 
     @Column(name = "EMAIL")
     private String email;
+
+//    @ManyToOne
+//    @JoinColumn(name = "ADDRESS_ID")
+//    private AddressEntity address;
+
+//    @OneToOne(mappedBy = "person")
+//    private StaffEntity staff;
 
     public CustomerEntity() {}
 
@@ -35,11 +42,11 @@ public class CustomerEntity {
         this.email = dto.getEmail();
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
