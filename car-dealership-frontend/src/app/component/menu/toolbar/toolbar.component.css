@@ -1,0 +1,21 @@
+.toolbar-container {
+    display: flex;
+    height: var(--toolbar-height);
+    align-content: center;
+}
+
+.spacer {
+    display: inline-block;
+    width: 100%;
+}
+
+.logo {
+    height: var(--toolbar-height);
+    width: auto;
+}
+
+.main-menu-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1rem;
+}

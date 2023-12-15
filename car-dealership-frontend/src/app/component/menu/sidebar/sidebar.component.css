@@ -1,0 +1,29 @@
+.sidenav-container {
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    /* width: 75%; */
+}
+
+.drawer-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container {
+    padding: 20px;
+}
+
+.openCloseButton {
+    justify-self: flex-end;
+}
+
+.content-container {
+    width: 100wv;
+}
+
+.side-menu-button {
+    width: 100%;
+}

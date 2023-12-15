@@ -1,0 +1,14 @@
+<div class="page-main-container">
+    <form [formGroup]="form">
+        <div class="form-field">
+            <mat-form-field appearance="outline">
+                <mat-label>Ügyfél neve</mat-label>
+                <input #nameInput
+                       matInput
+                       type="text"
+                       formControlName="customerName">
+                <mat-hint>255 / nameInput.length</mat-hint>
+            </mat-form-field>
+        </div>
+    </form>
+</div>
